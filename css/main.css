@@ -110,7 +110,6 @@ header {
 }
 .adress-nav {
     margin-left: auto;
-
     font-style: normal;
     font-weight: 500;
     font-size: 14px;
@@ -118,7 +117,26 @@ header {
     letter-spacing: 0.02em;
 }
 
-a[href="mailto:info@devstudio.com"]::before {
+.mail-icon {
+    outline: 1px solid tomato;
+
+    width: 16px;
+    height: 12px;
+    margin-right: 10px;
+}
+.mail-link {
+    outline: 1px solid tomato;
+    
+    padding-top: 32px;
+    padding-bottom: 32px;
+    display: inline-flex;
+    align-items: center;
+}
+.mail-link:hover .mail-icon,
+.mail-link:focus .mail-icon {
+    fill: var(--accent-color);
+}
+/* .mail-link::before {
     content:'';
     width: 16px;
     height: 12px;
@@ -128,9 +146,9 @@ a[href="mailto:info@devstudio.com"]::before {
     background-image: url('../images/svg/envelope.svg');
     background-size: contain;
     margin-right: 10px;
-}
+} */
 
-a[href="tel:+380961111111"]::before {
+.phone-link::before {
     content:'';
     width: 10px;
     height: 16px;
@@ -152,9 +170,8 @@ a[href="tel:+380961111111"]::before {
     max-width: 1600px;
     height: 600px;
     background-color:var(--secondary-background-color);
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4)) , url('../images/img_for_index/header_background.jpg');
-    background-size: contain;
-    background-position: center;
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)) , url('../images/img_for_index/header_background.jpg');
+    background-size: cover;
     background-repeat: no-repeat;
     
     
@@ -230,7 +247,7 @@ a[href="tel:+380961111111"]::before {
     height: 120px;
     border-radius: 4px;
     margin-bottom: 30px;
-    background-size: contain;
+    background-size: 70px 70px;
     background-repeat: no-repeat;
     background-position: center;
     background-color: #F5F4FA;
