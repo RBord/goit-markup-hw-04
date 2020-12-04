@@ -117,13 +117,27 @@ header {
     line-height: 1.143;
     letter-spacing: 0.02em;
 }
+
 a[href="mailto:info@devstudio.com"]::before {
     content:'';
     width: 16px;
     height: 12px;
-    display: inline-block;
+    display: inline-flex;
+    vertical-align: middle;
+
     background-image: url('../images/svg/envelope.svg');
     background-size: contain;
+    margin-right: 10px;
+}
+
+a[href="tel:+380961111111"]::before {
+    content:'';
+    width: 10px;
+    height: 16px;
+    display: inline-flex;
+    vertical-align: middle;
+
+    background-image: url('../images/svg/smartphone.svg');
     margin-right: 10px;
 }
 
@@ -138,7 +152,10 @@ a[href="mailto:info@devstudio.com"]::before {
     max-width: 1600px;
     height: 600px;
     background-color:var(--secondary-background-color);
-    background-image:url('../images/img_for_index/header_background.jpg');
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4)) , url('../images/img_for_index/header_background.jpg');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
     
     
     text-align: center;
@@ -207,7 +224,29 @@ a[href="mailto:info@devstudio.com"]::before {
     margin-right: 30px;
 }
 
-
+.features-list-item::before {
+    display: block;
+    content:'';
+    height: 120px;
+    border-radius: 4px;
+    margin-bottom: 30px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #F5F4FA;
+}
+.icon-antenna::before {
+    background-image: url('../images/svg/antenna.svg');
+}
+.icon-clock::before {
+    background-image: url('../images/svg/clock.svg');
+}
+.icon-diagramm::before {
+    background-image: url('../images/svg/diagram.svg')
+}
+.icon-astronaut::before {
+    background-image: url('../images/svg/astronaut.svg');
+}
 .features-list .item-title {
     margin-top: 0;
     margin-bottom: 10px;
